@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --panel: #121a2b;
+  --accent: #3d9cf0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: #e8eef8;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(61, 156, 240, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(62, 207, 142, 0.08), transparent 50%),
+    linear-gradient(180deg, #0b1220 0%, #080e1a 100%);
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--accent);
+  border-radius: 9999px;
+  animation: spin-slow 0.7s linear infinite;
+}
